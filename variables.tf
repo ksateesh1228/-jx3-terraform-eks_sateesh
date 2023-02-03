@@ -4,6 +4,7 @@
 variable "region" {
   description = "AWS region code for creating resources."
   type        = string
+  default     = "ap-south-1" 
 }
 
 variable "profile" {
@@ -25,7 +26,7 @@ variable "vault_user" {
 variable "cluster_name" {
   description = "Name of the Kubernetes cluster to create"
   type        = string
-  default     = ""
+  default     = "jx-cluster"
 }
 
 variable "force_destroy" {
@@ -35,7 +36,7 @@ variable "force_destroy" {
 }
 
 variable "is_jx2" {
-  default     = false
+  default     = true
   type        = bool
   description = "Flag to specify if jx2 related resources need to be created"
 }
@@ -43,6 +44,7 @@ variable "is_jx2" {
 variable "jx_git_url" {
   description = "URL for the Jenins X cluster git repository"
   type        = string
+  default     =  "https://github.com/ksateesh1228/satiesh_aws_eks.git"
 }
 
 variable "jx_bot_username" {
